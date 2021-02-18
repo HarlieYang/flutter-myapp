@@ -9,25 +9,22 @@ class HomePage extends StatelessWidget {
       color: Colors.blue,
       child: Stack(
         children: [
-          Positioned(
-            left: 0,
-            top: 0,
+          Align(
+            alignment: Alignment.topCenter,
             child: Icon(
               Icons.ac_unit,
               color: Colors.white,
             ),
           ),
-          Positioned(
-            top: 0,
-            right: 0,
+          Align(
+            alignment: Alignment.center,
             child: Icon(
               Icons.sanitizer,
               color: Colors.white,
             ),
           ),
-          Positioned(
-            bottom: 0,
-            left: 0,
+          Align(
+            alignment: Alignment.bottomCenter,
             child: Icon(
               Icons.east,
               color: Colors.white,
