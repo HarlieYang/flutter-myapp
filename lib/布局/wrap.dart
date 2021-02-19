@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'components/btn/btn.dart';
+import '../components/btn/btn.dart';
 
 class HomePage extends StatelessWidget {
   @override

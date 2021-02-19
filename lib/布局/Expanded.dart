@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../components/icon/icon.dart';
 
 class HomePage extends StatelessWidget {
   @override
