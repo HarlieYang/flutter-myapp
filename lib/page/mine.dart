@@ -8,6 +8,29 @@ class MinePage extends StatefulWidget {
 class _MinePageState extends State<MinePage> {
   @override
   Widget build(BuildContext context) {
-    return Text('个人中心');
+    return Column(
+      children: [
+        ElevatedButton(
+          onPressed: () => {
+            print('跳转到搜索页面'),
+            Navigator.pushNamed(
+              context,
+              '/search',
+              arguments: {
+                "title": "参数传递",
+              },
+            )
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(
+            //     builder: (context) {
+            //       return Search();
+            //     },
+            //   ),
+            // ),
+          },
+          child: Text('搜索页面'),
+        )
+      ],
+    );
   }
 }

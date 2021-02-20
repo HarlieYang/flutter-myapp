@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import './index.dart';
 import './mine.dart';
 
+// ignore: must_be_immutable
 class Tabs extends StatefulWidget {
-  Tabs({Key key}) : super(key: key);
-  _TabsState createState() => _TabsState();
+  int currentIndex = 0;
+  Tabs({Key key, this.currentIndex}) : super(key: key);
+  _TabsState createState() => _TabsState(currentIndex: this.currentIndex);
 }
 
 class _TabsState extends State<Tabs> {
-  int _currentIndex = 0;
+  int currentIndex = 0;
+  _TabsState({this.currentIndex});
   List _tabPages = [
     {"icon": Icon(Icons.home), "label": '首页', "widget": IndexPage()},
     {"icon": Icon(Icons.person), "label": '个人中心', "widget": MinePage()},
@@ -20,12 +23,13 @@ class _TabsState extends State<Tabs> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('底部导航')),
-      body: this._tabPages[this._currentIndex]["widget"],
+      body: this._tabPages[this.currentIndex]["widget"],
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: this._currentIndex,
+          currentIndex: this.currentIndex,
+          // ignore: sdk_version_set_literal
           onTap: (int index) => {
                 this.setState(() {
-                  this._currentIndex = index;
+                  this.currentIndex = index;
                 }),
               },
           iconSize: 26.0,
