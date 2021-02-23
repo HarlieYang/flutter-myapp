@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './index.dart';
-import './mine.dart';
+import '../page/index.dart';
+import '../page/mine.dart';
 
 // ignore: must_be_immutable
 class Tabs extends StatefulWidget {
@@ -18,9 +18,8 @@ class _TabsState extends State<Tabs> {
   List _tabPages = [
     {"icon": Icon(Icons.home), "label": '首页', "widget": IndexPage()},
     {"icon": Icon(Icons.person), "label": '个人中心', "widget": MinePage()},
-    {"icon": Icon(Icons.search), "label": '设置', "widget": MinePage()},
-    {"icon": Icon(Icons.tab), "label": '我的', "widget": MinePage()},
-    {"icon": Icon(Icons.share), "label": '分享', "widget": MinePage()},
+    {"icon": Icon(Icons.person), "label": '个人中心', "widget": MinePage()},
+    {"icon": Icon(Icons.person), "label": '个人中心', "widget": MinePage()}
   ];
 
   @override
@@ -60,10 +59,7 @@ class _TabsState extends State<Tabs> {
             ListTile(
               leading: Icon(Icons.ac_unit),
               title: Text("sdfsdfsd"),
-              onTap: () {
-                Navigator.of(context).pop(); // 关掉侧边栏
-                Navigator.pushNamed(context, "/");
-              },
+              onTap: () => {Navigator.pushNamed(context, "/search")},
             ),
             Divider(color: Colors.black),
             ListTile(
@@ -77,28 +73,6 @@ class _TabsState extends State<Tabs> {
       endDrawer: Drawer(
         child: Text('右侧侧边栏'),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          this.setState(() {
-            this.currentIndex = 1;
-          });
-        },
-        backgroundColor: this.currentIndex == 2 ? Colors.blue : Colors.red,
-        child: Container(
-          width: 100.0,
-          height: 100.0,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(70),
-            // color: Colors.blue,
-          ),
-          child: Icon(
-            Icons.add,
-          ),
-          padding: EdgeInsets.all(8),
-          // margin: EdgeInsets.only(top: 10.0),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
           currentIndex: this.currentIndex,
           onTap: (int index) => {

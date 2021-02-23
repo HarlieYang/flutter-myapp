@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myapp/page/tabs.dart';
 
@@ -20,13 +19,13 @@ class _SearchState extends State<Search> {
         title: Text('搜索页面'),
       ),
       body: ElevatedButton(
-        onPressed: () => {
+        onPressed: () {
           // 返回跟组件
           Navigator.of(context).pushAndRemoveUntil(
               new MaterialPageRoute(
                 builder: (context) => Tabs(currentIndex: 1),
               ),
-              (route) => route == null)
+              (route) => route == null);
         },
         child: Text(this.arguments['title']),
       ),
