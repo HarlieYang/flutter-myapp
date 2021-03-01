@@ -7,6 +7,7 @@ import './page/tabbarcontrl.dart';
 import './page/button.dart';
 import 'page/textField.dart';
 import 'page/checkbox.dart';
+import 'page/radio.dart';
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
     '/tabbarcontrl': (context) => TabBarControllPage(),
     '/ButtonDemo': (context) => ButtonDemo(),
     '/formpage': (context) => FormPage(),
-    '/checkbox': (context) => CheckboxPage()
+    '/checkbox': (context) => CheckboxPage(),
+    '/radiobox': (context) => RadioPage()
   };
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,7 @@ class MyApp extends StatelessWidget {
       //   '/search': (context) => Search(),
       //   '/list': (context) => List(),
       // },
-      initialRoute: '/checkbox',
+      initialRoute: '/radiobox',
       onGenerateRoute: (RouteSettings settings) {
         final name = settings.name;
         final Function pageContentBuilder = this.routes[name];
