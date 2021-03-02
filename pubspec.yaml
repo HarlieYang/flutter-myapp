@@ -33,6 +33,7 @@ dependencies:
   flutter_is_emulator: ^1.0.0
   webview_flutter: ^1.0.7
   date_format: ^1.0.9
+  flutter_cupertino_date_picker: ^1.0.26+2
 dev_dependencies:
   flutter_test:
     sdk: flutter

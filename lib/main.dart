@@ -50,13 +50,13 @@ class MyApp extends StatelessWidget {
         const Locale('zh', 'CH'),
         const Locale('en', 'US'),
       ],
-      locale: Locale("zh"),
+      locale: Locale("zh"), //  非必需
       home: Tabs(currentIndex: 0),
       // routes: {
       //   '/search': (context) => Search(),
       //   '/list': (context) => List(),
       // },
-      initialRoute: '/funcpage',
+      initialRoute: '/',
       onGenerateRoute: (RouteSettings settings) {
         final name = settings.name;
         final Function pageContentBuilder = this.routes[name];
