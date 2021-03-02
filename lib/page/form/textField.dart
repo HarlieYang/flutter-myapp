@@ -1,14 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class FormPage extends StatefulWidget {
-  FormPage({Key key}) : super(key: key);
+class TextFiledPage extends StatefulWidget {
+  TextFiledPage({Key key}) : super(key: key);
 
   @override
   _FormPageState createState() => _FormPageState();
 }
 
-class _FormPageState extends State<FormPage> {
+class _FormPageState extends State<TextFiledPage> {
   var username = TextEditingController(); // 设置初始值
   var _password;
   @override

@@ -10,9 +10,10 @@ class CheckboxPage extends StatefulWidget {
 }
 
 class _CheckboxPageState extends State<CheckboxPage> {
-  var flag;
+  var flag = false;
   @override
   Widget build(BuildContext context) {
+    print('this.flag${this.flag}');
     return Scaffold(
       appBar: AppBar(
         title: Text('checkbox'),
@@ -20,7 +21,7 @@ class _CheckboxPageState extends State<CheckboxPage> {
       body: Column(
         children: [
           Checkbox(
-            value: this.flag,
+            value: false,
             onChanged: (newValue) {
               setState(() {
                 this.flag = newValue;
