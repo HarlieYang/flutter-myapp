@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './index.dart';
 import './mine.dart';
 import 'form/formpage.dart';
+import 'func/index.dart';
 
 // ignore: must_be_immutable
 class Tabs extends StatefulWidget {
@@ -19,9 +20,9 @@ class _TabsState extends State<Tabs> {
   List _tabPages = [
     {"icon": Icon(Icons.home), "label": '首页', "widget": IndexPage()},
     {"icon": Icon(Icons.person), "label": '表单示例', "widget": FormPage()},
-    {"icon": Icon(Icons.search), "label": '设置', "widget": MinePage()},
-    {"icon": Icon(Icons.tab), "label": '我的', "widget": MinePage()},
-    {"icon": Icon(Icons.share), "label": '分享', "widget": MinePage()},
+    {"icon": Icon(Icons.search), "label": '功能示例', "widget": FuncPage()},
+    {"icon": Icon(Icons.network_wifi), "label": '接口请求', "widget": MinePage()},
+    {"icon": Icon(Icons.settings), "label": '设置', "widget": MinePage()},
   ];
 
   @override

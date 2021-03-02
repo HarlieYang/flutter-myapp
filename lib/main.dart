@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import './page/tabs.dart';
 import './page/search.dart';
 import './page/list.dart';
 import './page/appbardemo.dart';
 import './page/tabbarcontrl.dart';
 import './page/button.dart';
+// form
 import './page/form/formpage.dart';
 import './page/form/textField.dart';
 import './page/form/checkbox.dart';
 import './page/form/radio.dart';
 import './page/form/demo.dart';
+// func
+import './page/func/index.dart';
+import './page/func/time.dart';
+import './page/func/timemain.dart';
+import './page/func/timenet.dart';
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
@@ -24,17 +31,32 @@ class MyApp extends StatelessWidget {
     '/checkbox': (context) => CheckboxPage(),
     '/radiobox': (context) => RadioPage(),
     '/formpage': (context) => FormPage(),
-    '/formdemo': (context, {arguments}) => FormDemoPage(arguments: arguments)
+    '/formdemo': (context, {arguments}) => FormDemoPage(arguments: arguments),
+    '/funcpage': (context) => FuncPage(),
+    '/timepage': (context) => TimePage(),
+    '/timemain': (context) => TimeMainPage(),
+    '/timenet': (context) => TimeNetPage(),
   };
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        //此处
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: [
+        //此处
+        const Locale('zh', 'CH'),
+        const Locale('en', 'US'),
+      ],
+      locale: Locale("zh"),
       home: Tabs(currentIndex: 0),
       // routes: {
       //   '/search': (context) => Search(),
       //   '/list': (context) => List(),
       // },
-      initialRoute: '/formdemo',
+      initialRoute: '/funcpage',
       onGenerateRoute: (RouteSettings settings) {
         final name = settings.name;
         final Function pageContentBuilder = this.routes[name];
