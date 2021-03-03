@@ -27,6 +27,9 @@ class FuncPage extends StatelessWidget {
               title: Text('轮播图'),
               leading: Icon(Icons.swipe),
               subtitle: Text('轮播图功能插件示例-swiper'),
+              onTap: () {
+                Navigator.pushNamed(context, '/swiper');
+              },
             ),
             Divider(
               color: Colors.black,
@@ -35,6 +38,9 @@ class FuncPage extends StatelessWidget {
               title: Text('弹层'),
               leading: Icon(Icons.add_alert),
               subtitle: Text('自定义弹框'),
+              onTap: () {
+                Navigator.pushNamed(context, '/alert');
+              },
             ),
             Divider(
               color: Colors.black,

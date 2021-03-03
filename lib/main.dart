@@ -17,6 +17,8 @@ import './page/func/index.dart';
 import './page/func/time.dart';
 import './page/func/timemain.dart';
 import './page/func/timenet.dart';
+import './page/func/swiper.dart';
+import './page/func/alert.dart';
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
@@ -36,6 +38,8 @@ class MyApp extends StatelessWidget {
     '/timepage': (context) => TimePage(),
     '/timemain': (context) => TimeMainPage(),
     '/timenet': (context) => TimeNetPage(),
+    '/swiper': (context) => SwiperPage(),
+    '/alert': (context) => AlertPage(),
   };
   @override
   Widget build(BuildContext context) {
@@ -56,7 +60,7 @@ class MyApp extends StatelessWidget {
       //   '/search': (context) => Search(),
       //   '/list': (context) => List(),
       // },
-      initialRoute: '/',
+      initialRoute: '/alert',
       onGenerateRoute: (RouteSettings settings) {
         final name = settings.name;
         final Function pageContentBuilder = this.routes[name];
