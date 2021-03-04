@@ -3,6 +3,7 @@ import './index.dart';
 import './mine.dart';
 import 'form/formpage.dart';
 import 'func/index.dart';
+import 'api/index.dart';
 
 // ignore: must_be_immutable
 class Tabs extends StatefulWidget {
@@ -21,8 +22,8 @@ class _TabsState extends State<Tabs> {
     {"icon": Icon(Icons.home), "label": '首页', "widget": IndexPage()},
     {"icon": Icon(Icons.person), "label": '表单示例', "widget": FormPage()},
     {"icon": Icon(Icons.search), "label": '功能示例', "widget": FuncPage()},
-    {"icon": Icon(Icons.network_wifi), "label": '接口请求', "widget": MinePage()},
-    {"icon": Icon(Icons.settings), "label": '设置', "widget": MinePage()},
+    {"icon": Icon(Icons.network_wifi), "label": '接口请求', "widget": ApiPage()},
+    {"icon": Icon(Icons.settings), "label": '设置', "widget": ApiPage()},
   ];
 
   @override

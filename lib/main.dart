@@ -19,6 +19,9 @@ import './page/func/timemain.dart';
 import './page/func/timenet.dart';
 import './page/func/swiper.dart';
 import './page/func/alert.dart';
+// api
+import './page/api/index.dart';
+import './page/api/dio.dart';
 
 // ignore: must_be_immutable
 class MyApp extends StatelessWidget {
@@ -40,6 +43,8 @@ class MyApp extends StatelessWidget {
     '/timenet': (context) => TimeNetPage(),
     '/swiper': (context) => SwiperPage(),
     '/alert': (context) => AlertPage(),
+    '/api': (context) => ApiPage(),
+    '/dio': (context) => DioPage(),
   };
   @override
   Widget build(BuildContext context) {
@@ -60,7 +65,7 @@ class MyApp extends StatelessWidget {
       //   '/search': (context) => Search(),
       //   '/list': (context) => List(),
       // },
-      initialRoute: '/alert',
+      initialRoute: '/dio',
       onGenerateRoute: (RouteSettings settings) {
         final name = settings.name;
         final Function pageContentBuilder = this.routes[name];
